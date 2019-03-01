@@ -21,6 +21,8 @@ window.addEventListener("load",function(){
 
 function tableCreate(){
 
+    var head = ["No","Name","Height","Mass","Hair Color","Skin Color","Eye Color","Birth Year","Gender"]
+
     setTimeout(function()
     {
         var body = document.getElementById("tabel"),
@@ -37,44 +39,7 @@ function tableCreate(){
                 th  = document.createElement('th');
                 th.className += "has-text-centered"
                 th.style.border = '1px solid black';
-
-                if(i==0)
-                {
-                    th.innerHTML = "No";
-                }
-                else if(i==1)
-                {
-                    th.innerHTML = "Name";
-                }
-                else if(i==2)
-                {
-                    th.innerHTML = "Height";
-                }
-                else if(i==3)
-                {
-                    th.innerHTML = "Mass";
-                }
-                else if(i==4)
-                {
-                    th.innerHTML = "Hair Color";
-                }
-                else if(i==5)
-                {
-                    th.innerHTML = "Skin Color";
-                }
-                else if(i==6)
-                {
-                    th.innerHTML = "Eye Color";
-                }
-                else if(i==7)
-                {
-                    th.innerHTML = "Birth Year";
-                }
-                else if(i==8)
-                {
-                    th.innerHTML = "Gender";
-                }
-
+                th.innerHTML = head[i];
                 tr.appendChild(th);
             }
 
